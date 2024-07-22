@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Car{% endblock %}
+
+{% block content %}
+    <h1>Add a New Car</h1>
+    <form method="post">
+        <div class="form-group">
+            <label for="number">Car Number:</label>
+            <input type="text" class="form-control" id="number" name="number" required>
+        </div>
+        <div class="form-group">
+            <label for="image">Car Image URL:</label>
+            <input type="text" class="form-control" id="image" name="image" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Car</button>
+    </form>
+    <a class="btn btn-secondary mt-3" href="{{ url_for('index') }}">Back to Home</a>
+{% endblock %}
